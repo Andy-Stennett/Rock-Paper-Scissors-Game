@@ -18,31 +18,38 @@
 </head>
 
 <body>
-
-    <h1 class="heading"> Rock Paper Scissors Game
-
-    </h1>
-
-    <div class="play-area">
+        <h1     
+            class="heading" 
+            style="text-align: center; font-size:2.5rem; color:rgb(255, 94, 0)" >Rock Paper Scissors Game
+        </h1>
+       <div class="play-area" style="background-color: cyan; margin-left:30vw; width:40vw;">
         
         <div class="input-data">
-            <span class="player-input"><h3>Choose Your Weapon</span>
-            <span class="player-choice"></span>
-            <span class="computer-input">Computer Choice</span></h3>
+                <span class="player-input" style="width:20vw; text-align:center; margin-left:5vw; font-size:1.5rem; font-style:italic; margin-top:5vw;">Choose Your Weapon</span>
+                <span class="player-choice" style="width:10vw; text-align:left; margin-left:2vw; font-size:1.5rem; font-style:italic; margin-top:5vw;">test</span>
+                <span class="computer-input" style="width:20vw; text-align:center; margin-left:5vw; font-size:1.5rem; font-style:italic; margin-top:5vw;">Computer Choice</span>
         </div>
-        <div>
-                <span class="player-input">
-                <button data-type="rock" class="btn btn--big btn--brown"><i class="fa-solid fa-hand-back-fist" style="font-size:60px;color:rgb(97, 45, 3);"></i></button>
+
+        <br>
+        <br>
+
+            <div>
+                <span class="player-input" style="background-color:cyan; margin-left:9vw;">
+                <button data-type="rock" class="btn btn--big btn--brown" style="background-color:cyan; border:none;"><i class="fa-solid fa-hand-back-fist" style="font-size:60px; color:rgb(97, 45, 3); background-color:cyan; rotate:90deg;"></i></button>
                 </span>
                 <br>
-                <span class="player-input">
-                    <button data-type="paper" class="btn btn--big btn--white"><i class="fa-solid fa-hand" style="font-size:60px;color:rgb(226, 151, 151);"></i></button>
-                </span>
-                <span class="player-choice">Test</span>
-                <span class="computer-input"><button class="btn btn--big btn--white"><i class="fa-solid fa-hand" style="font-size:60px;color:rgb(226, 151, 151);"></i></button></span>
                 <br>
-                <span class="player-input">
-                    <button data-type="scissors" class="btn btn--big btn--grey"><i class="fa-solid fa-hand-scissors" style="font-size:60px;color:rgb(97, 99, 100);"></i></button>
+                <span class="player-input" style="background-color:cyan; margin-left:9vw;">
+                    <button data-type="paper" class="btn btn--big btn--white" style="background-color:cyan; border:none;"><i class="fa-solid fa-hand" style="font-size:60px; color:rgb(222, 227, 230); rotate:90deg;"></i></button>
+                </span>
+                <span class="player-choice" style="width:10vw; text-align:left; margin-left:5vw;">
+                    <button data-type="player-input" id="player-choice" class="btn btn--big btn--choice" style="background-color:cyan; border:none;"><i class="fa-solid fa-circle" style="font-size:55px; color:rgb(22, 0, 216); rotate:90deg;"></i></button></span></span>
+                <span class="computer-input" style="background-color:cyan; margin-left:5vw;">
+                    <button data-type="computer-input" id="computer-choice" class="btn btn--big btn--input" style="background-color:cyan; border:none;"><i class="fa-solid fa-circle" style="font-size:55px; color:rgb(216, 0, 0); rotate:90deg;"></i></button></span>
+                <br>
+                <br>
+                <span class="player-input" style="background-color:cyan; margin-left:9vw;">
+                    <button data-type="scissors" class="btn btn--big btn--grey" style="background-color:cyan; border:none;"><i class="fa-solid fa-hand-scissors" style="font-size:60px; color:rgb(97, 99, 100); rotate: 0 1 0 180deg;"></i></button>
                 </span>
             </div>
 
