@@ -60,23 +60,45 @@ body {
         font-size:60px;
         color:rgb(97, 45, 3);
         rotate:90deg;
+    
     }
 
-    .btn--rock:active,
-    .btn--rock:hover
+    .btn--rock:hover,
+    .btn--rock:active
     {
         color:red;
         background-color:yellow;    
     }
-
-    .btn--input {
-        margin-left:6vw;
-    }
-
+    
     .btn--paper {
         font-size:60px;
         color:rgb(240, 121, 24);
         rotate:90deg;
+    }
+
+    .btn--paper:hover,
+    .btn--paper:active
+    {
+        color:red;
+        background-color:yellow;    
+    } 
+    
+    .btn--scissors {
+        font-size:60px;
+        color:rgb(97, 99, 100);
+        rotate: 0 1 0 180deg;
+    }
+
+    .btn--scissors:hover,
+    .btn-scissors:active
+    {
+        color:red;
+        background-color:yellow;    
+    }
+    
+
+    .btn--input {
+        margin-left:6vw;
     }
 
     .btn--choice {
@@ -86,4 +108,107 @@ body {
 
     .btn--computer-input {
         margin-left:4vw;
+    }
+
+    .placeholder--p {
+        font-size:55px;
+        color:rgb(22, 0, 216);
+    }
+
+    .placeholder--c {
+        font-size:55px;
+        color:rgb(255, 0, 43);
+    }
+
+   
+
+    
+
+    /* Results and score area */
+
+    .result-text{
+        text-align:center;
+        font-size:1.5rem;
+        font-style:bold;
+        color:rgb(255, 0, 0);
+    }
+
+    .score-area {
+        text-align:center;
+        font-size:1.5rem;
+        font-style:bold;
+        color:rgb(231, 56, 56);
+    }
+
+    .score {
+        margin-left:2vw;
+        margin-right:2vw;
+        border:1px;
+        font-style:bold;
+        color:cyan;
+        background-color:rgb(85, 84, 84);
+    }
+
+    .btn--reset {
+        background-color:rgb(255, 0, 0);
+        font-size:2rem;
+        border:none;
+    }
+
+
+    /* viewport size query */
+
+    @media (max-width: 768px) {
+        .game-area {
+            margin-left:0vw;
+            width:100vw;
+        }
+
+        .player-input {
+            width:40vw;
+            text-align:left;
+            margin-left:0vw;
+        }
+
+        .player-choice {
+            width:20vw;
+            text-align:center;
+            margin-left:0vw;
+        }
+
+        .computer-input {
+            width:40vw;
+            text-align:center;
+            margin-left:2vw;
+        }
+
+        .btn--input {
+            margin-left:0vw;
+        }
+
+        .btn--choice {
+            margin-left:5vw;
+        }
+
+        .btn--computer-input {
+            margin-left:20vw;
+        }
+
+        .placeholder--p {
+            font-size:55px;
+            color:rgb(22, 0, 216);
+        }
+
+        .placeholder--c {
+            font-size:55px;
+            color:rgb(255, 0, 43);
+        }
+        .score {
+            margin-left:0vw;
+            margin-right:0vw;
+            border:1px;
+            font-style:bold;
+            color:cyan;
+            background-color:rgb(85, 84, 84);
+        }
     }
