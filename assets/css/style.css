@@ -4,3 +4,86 @@ body {
     font-style:bold;
     color: #24292e;
     }
+
+    /* setting up styles for play area */
+
+    .heading {
+        
+        text-align: center;
+        font-size:2.5rem;
+        font-style:bold;
+    }
+    .game-area {
+
+        background-color: cyan;
+        margin-left:30vw;
+        width:40vw;
+        font-size:1.5rem;
+    }
+
+    .input_area {
+        font-size:1.5rem;
+        font-style:bold;
+        margin-top:5vw;
+    }
+
+    .player-input {
+        width:20vw;
+        text-align:left;
+        margin-left:9vw;
+    }
+
+    .player-choice {
+        width:10vw;
+        text-align:center;
+        margin-left:2vw;
+    }
+
+    .computer-input {
+        width:20vw;
+        text-align:center;
+        margin-left:5vw;
+    }
+
+    .btn {
+        background-color:cyan;
+        border:none;
+    }
+
+    .btn:hover
+    {
+        color:red;
+        background-color:transparent;
+    }
+
+    .btn--rock {
+        font-size:60px;
+        color:rgb(97, 45, 3);
+        rotate:90deg;
+    }
+
+    .btn--rock:active,
+    .btn--rock:hover
+    {
+        color:red;
+        background-color:yellow;    
+    }
+
+    .btn--input {
+        margin-left:6vw;
+    }
+
+    .btn--paper {
+        font-size:60px;
+        color:rgb(240, 121, 24);
+        rotate:90deg;
+    }
+
+    .btn--choice {
+        background-color:cyan;
+        border:none;
+    }
+
+    .btn--computer-input {
+        margin-left:4vw;
+    }
