@@ -43,6 +43,7 @@ body {
         width:20vw;
         text-align:center;
         margin-left:5vw;
+
     }
 
     .btn {
@@ -101,13 +102,15 @@ body {
         margin-left:6vw;
     }
 
-    .btn--choice {
+    .span--player-input {
         background-color:cyan;
         border:none;
     }
 
-    .btn--computer-input {
-        margin-left:4vw;
+    .span--computer-input {
+        margin-left:9vw;
+        background-color:cyan;
+        border:none;
     }
 
     .placeholder--p {
@@ -159,9 +162,18 @@ body {
     /* viewport size query */
 
     @media (max-width: 768px) {
+        
+        .heading {
+            font-size:1.2rem;
+        }
+
+        .input_area {
+            font-size:1rem;
+        }
         .game-area {
             margin-left:0vw;
             width:100vw;
+            font-size:adjust;
         }
 
         .player-input {
@@ -182,16 +194,18 @@ body {
             margin-left:2vw;
         }
 
+        .span--computer-input {
+            margin-left:15vw;
+            background-color:cyan;
+            border:none;
+        }
+
         .btn--input {
             margin-left:0vw;
         }
 
         .btn--choice {
-            margin-left:5vw;
-        }
-
-        .btn--computer-input {
-            margin-left:20vw;
+            margin-left:10vw;
         }
 
         .placeholder--p {

@@ -36,28 +36,28 @@
 
                 <div>
                     <span class="player-input">
-                        <button data-type="rock" class="btn">
+                        <button data-type="rock" onclick=rockFunction() class="btn">
                             <i class="fa-solid fa-hand-back-fist btn--rock" ></i>
                         </button>
                     </span>
                     <br>
                     <br>
                     <span class="player-input">
-                        <button data-type="paper" class="btn" >
+                        <button data-type="paper" id="paper" class="btn" >
                             <i class="fa-solid fa-hand btn--paper"></i>
                         </button>
                     </span>
 
                     <span class="player-choice">
-                        <button data-type="player-input" id="player-choice" class="btn btn--choice">
+                        <span id="player-choice" class="span--player-input">
                             <i class="fa-solid fa-circle placeholder--p"></i>
-                        </button>
+                        </span>
                     </span>
                     
                     <span class="computer-choice">
-                        <button data-type="computer-input" id="computer-choice" class="btn btn--computer-input" >
+                        <span data-type="computer-input" id="computer-choice" class="span--computer-input" >
                             <i class="fa-solid fa-circle placeholder--c"></i>
-                        </button>
+                        </span>
                     </span>
                     <br>
                     <br>
@@ -81,7 +81,7 @@
         </div> 
         
         <div class="reset-area" style="text-align:center; font-size:1.5rem; font-style:bold; color:rgb(96, 114, 221);">
-            <button class="btn btn--reset" id="reset">Play</button>
+            <button class="btn btn--reset" id="reset">Play/Reset</button>
     
         </div>
 
