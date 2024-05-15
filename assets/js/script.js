@@ -5,12 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         buttons.addEventListener("click", function() {
             console.log(this);
             if(this.getAttribute("data-type") === "reset") {
-                document.getElementById("player-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--p"></i>`;
-                document.getElementById("computer-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--c"></i>`;
-                document.getElementById("result").innerText =`Look what happened`;
-                document.getElementById("player-score").innerText = `0`;
-                document.getElementById("computer-score").innertext = `0`;
-                alert("Game reset, choose your weapon to play.");
+                resetGame();
             } else {
                 let playerChoice = this.getAttribute("data-type");
                 mainGame(playerChoice);
@@ -19,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* mainGame function to run the game */
+
 function mainGame(playerChoice) {
         if(playerChoice === "rock") {
             document.getElementById("player-choice").innerHTML = `<i class="fa-solid fa-hand-back-fist btn--rock"></i>`;
@@ -38,20 +36,22 @@ function mainGame(playerChoice) {
 
         addScore(result);
 
+/* checking if the player or computer has reached 5 points to end the match */
+
+        let playerScore = parseInt(document.getElementById("player-score").innerText);
+        let computerScore = parseInt(document.getElementById("computer-score").innerText);
+        
         if(playerScore === 5) {
             alert("Congratulations! You have won the game. Press Reset to restart.");
-            document.getElementById("player-score").innerHTML = 0;
-            document.getElementById("computer-score").innerHTML = 0;
         }
         else if(computerScore === 5) {
             alert("Sorry! You have lost the game. Press Reset to restart.");
-            document.getElementById("player-score").innerHTML = 0;
-            document.getElementById("computer-score").innerHTML = 0;
         }
 
 
         
 };
+/* getting a random number between 1 and 3 to determine the computer's choice */
 
 function getComputerChoice() {
 
@@ -69,6 +69,7 @@ function getComputerChoice() {
     return(computerChoice);
 }
 
+/* checking the winner of the game */
 function checkWinner(playerChoice, computerChoice) {
     let result = document.getElementById("result").innerHTML;
     
@@ -117,6 +118,7 @@ function checkWinner(playerChoice, computerChoice) {
     
     
 }
+ /* adding to the player and computer scores*/
 
     function addScore(result) {
 
@@ -134,6 +136,17 @@ function checkWinner(playerChoice, computerChoice) {
             return playerScore, computerScore;
         }
        
-    } 
+    }
+
+    /* resetting the game */
+    function resetGame() {
+        document.getElementById("player-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--p"></i>`;
+        document.getElementById("computer-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--c"></i>`;
+        document.getElementById("result").innerText =`Look what happened`;
+        document.getElementById("player-score").innerText = `0`;
+        document.getElementById("computer-score").innerText = `0`;
+        alert("Game reset, choose your weapon to play.");
+    }
+
 
 // Path: assets/js/script.js
