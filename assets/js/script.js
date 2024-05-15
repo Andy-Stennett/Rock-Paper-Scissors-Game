@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if(this.getAttribute("data-type") === "reset") {
                 document.getElementById("player-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--p"></i>`;
                 document.getElementById("computer-choice").innerHTML = `<i class="fa-solid fa-circle placeholder--c"></i>`;
+                document.getElementById("result").innerText =`Look what happened`;
+                document.getElementById("player-score").innerText = `0`;
+                document.getElementById("computer-score").innertext = `0`;
                 alert("Game reset, choose your weapon to play.");
             } else {
                 let playerChoice = this.getAttribute("data-type");
@@ -30,10 +33,10 @@ function mainGame(playerChoice) {
             alert("Invalid choice, please choose again.");
         }
         let computerChoice = getComputerChoice();
+        
         let result = checkWinner(playerChoice, computerChoice);
 
-        let playerScore = AddScore.playerScore;
-        let computerScore = AddScore.computerScore;
+        addScore(result);
 
         if(playerScore === 5) {
             alert("Congratulations! You have won the game. Press Reset to restart.");
@@ -75,51 +78,62 @@ function checkWinner(playerChoice, computerChoice) {
     else if(playerChoice === "rock") {
         if(computerChoice === 2) {
             document.getElementById("result").innerHTML =`Paper wraps rock. Computer scores!`;
-            result==="Computer Scores!";
+            result = "Computer Scores!";
+            return result;
         }
         else {
             document.getElementById("result").innerHTML =`Rock blunts Scissors. Player scores!`;
-            result==="Player Scores!";
+            result = "Player Scores!";
+            return result;
         }
     }
     else if(playerChoice === "paper") {
         if(computerChoice === 1) {
             document.getElementById("result").innerHTML =`Paper wraps rock. Player scores!`;
-            result==="Player Scores!";
+            result = "Player Scores!";
+            return result;
         }
         else {
             document.getElementById("result").innerHTML =`Scissors cut paper. Computer scores!`;
-            result==="Computer Scores!";
+            result = "Computer Scores!";
+            return result;
         }
     }
     else if(playerChoice === "scissors") {
         if(computerChoice === 1) {
             document.getElementById("result").innerHTML =`Rock blunts Scissors. Computer scores!`;
-            result==="Computer Scores!";
+            result = "Computer Scores!";
+            return result;
         }
         else {
             document.getElementById("result").innerHTML =`Scissors cut paper. Player scores!`;
-            result==="Player Scores!";
+            result = "Player Scores!";
+            return result;
         }
     }
     else {
         alert("Invalid choice, please choose again.");
     }
     
-    return result;
+    
 }
 
-    function AddScore(result) {
+    function addScore(result) {
 
         let playerScore = parseInt(document.getElementById("player-score").innerText);
         let computerScore = parseInt(document.getElementById("computer-score").innerText);
         if(result==="Player Scores!") {
             playerScore = playerScore + 1;
+            document.getElementById("player-score").innerText = playerScore;
+            return playerScore, computerScore;
         }
-        else if(result==="Computer Scores!") {
+        
+        else  { 
             computerScore = computerScore + 1;
+            document.getElementById("computer-score").innerText = computerScore;
+            return playerScore, computerScore;
         }
-        return(playerScore, computerScore);
+       
     } 
 
 // Path: assets/js/script.js
